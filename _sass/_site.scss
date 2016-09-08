@@ -1,0 +1,326 @@
+//Google font para el tema
+@import url(https://fonts.googleapis.com/css?family=Oswald:400,700,300);
+
+// Variables de color para el tema
+$main-color: #00e6c7;
+$secondary-color: #393c3e;
+
+/*
+Colores alternativos para el tema
+
+1ra opción - rojo
+$main-color: #ffde00;
+$secondary-color: #393c3e;
+
+2da opción -amarillo
+$main-color: #F55265;
+$secondary-color: #a7a9ac;
+*/
+
+$text-color: #393c3e;
+$almost-white: #f2f2f2;
+$almost-black: #050505; //Este color se usa para el bloque del footer
+
+html {
+  font-size: 100%;
+}
+
+body {
+  padding-top: 50px;
+}
+
+p {
+  color: $text-color;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 300;
+}
+
+.starter-template {
+  padding: 70px 15px;
+  text-align: center;
+}
+
+.white-block {
+  margin: 5.313em 0;
+  @media (orientation: portrait) and (max-width:767px) {
+    margin: 2.625em 0;
+  }
+
+  ul, ol {
+    margin: 0!important;
+  }
+
+  h2 {
+    border-bottom: solid 1px lighten($secondary-color, 50%);
+    color: $main-color;
+    font-family: 'Oswald', sans-serif;
+    font-size: 2.250em;
+    font-weight: 300;
+    margin-bottom: 0.938em;
+    padding-bottom: 1.250em;
+    text-align: center;
+    @media (orientation: portrait) and (max-width:767px) {
+      padding-bottom: 0.938em;
+    }
+  }
+
+  h3 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.500em;
+    font-weight: 300;
+  }
+
+  h4 {
+    color: $main-color;
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.25em;
+  }
+
+  a {
+    color: $main-color;
+  }
+
+  a:hover, a:visited {
+    color: darken($main-color, 25%);
+  }
+
+  li {
+    list-style: none;
+  }
+
+  .post-list {
+    margin-bottom: 2.5em;
+    padding-bottom: 2em;
+    border-bottom: 1px solid lighten($secondary-color, 50%);
+    @media screen and (orientation: portrait) and (max-width:767px) {
+      margin-bottom: 1.875em;
+    }
+  }
+
+  .post-date {
+    color: $text-color;
+    display: block;
+    font-family: 'Oswald', sans-serif;
+    font-size: 0.875em;
+    font-weight: 300;
+    margin-bottom: 0.938em;
+  }
+
+  .post-title {
+    color: $text-color;
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.500em;
+    font-weight: 300;
+  }
+}
+
+.white-block-bis {
+  margin: 5.313em 0 0 0;
+  @media screen and (orientation: portrait) and (max-width:767px) {
+    margin: 2.625em 0 0 0;
+  }
+
+  h2 {
+    border-bottom: solid 1px lighten($secondary-color, 50%);
+    color: $main-color;
+    font-family: 'Oswald', sans-serif;
+    font-size: 2.250em;
+    font-weight: 300;
+    margin-bottom: 0.938em;
+    padding-bottom: 1.250em;
+    text-align: center;
+    @media screen and (orientation: portrait) and (max-width:767px) {
+      padding-bottom: 0.938em;
+    }
+  }
+
+  h4 {
+    color: $main-color;
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.25em;
+  }
+
+  li {
+    list-style: none;
+  }
+}
+
+.secondary-color-background {
+  background-color: $secondary-color;
+}
+
+.secondary-color-block {
+  margin: 5.313em 0 0 0;
+  @media (orientation: portrait) and (max-width:767px) {
+    margin: 2.625em 0 0 0;
+  }
+
+  h2 {
+    border-bottom: solid 1px lighten($secondary-color, 50%);
+    color: $main-color;
+    font-family: 'Oswald', sans-serif;
+    font-size: 2.250em;
+    font-weight: 300;
+    margin-bottom: 0.938em;
+    padding-bottom: 1.250em;
+    text-align: center;
+    @media (orientation: portrait) and (max-width:767px) {
+      padding-bottom: 0.938em;
+    }
+  }
+
+  h3 {
+    color: $main-color;
+    font-family: 'Oswald', sans-serif;
+    font-size: 2.250em;
+    font-weight: 300;
+    padding-bottom: 1.250em;
+    text-align: center;
+    @media screen and (orientation: portrait) and (max-width: 767px) {
+      padding-bottom: 0;
+    }
+  }
+
+  p {
+    color: $almost-white;
+  }
+
+  li {
+    list-style: none;
+  }
+
+}
+
+.main-color-background {
+  background-color: $main-color;
+}
+
+.main-color-block {
+  margin: 5.313em 0 0 0;
+  @media (orientation: portrait) and (max-width:767px) {
+    margin: 2.625em 0 0 0;
+  }
+
+  h2 {
+    color: $secondary-color;
+    font-family: 'Oswald', sans-serif;
+    font-size: 2.250em;
+    font-weight: 300;
+    margin-bottom: 0;
+    padding-bottom: 1.250em;
+    text-align: center;
+    @media (orientation: portrait) and (max-width:767px) {
+      padding-bottom: 0.938em;
+    }
+  }
+
+  .border-title {
+    border-bottom: solid 1px darken($almost-white, 50%);
+    margin-bottom: 0.938em;
+  }
+
+  h3 {
+    color: $secondary-color;
+    font-family: 'Oswald', sans-serif;
+    font-size: 2.250em;
+    font-weight: 300;
+    padding-bottom: 1.250em;
+    text-align: center;
+  }
+
+  p {
+    color: $text-color;
+  }
+
+  ul {
+    margin-left: 0;
+    margin-bottom: 0!important;
+  }
+
+  li {
+    list-style: none;
+  }
+
+  .map {
+    height: 31.250em;
+    margin-bottom: 5.313em;
+    width: 100%;
+    @media (orientation: portrait) and (max-width:767px) {
+      margin-bottom: 2.625em;
+      height: 19.250em;
+    }
+  }
+}
+
+.award {
+  margin: 0!important;
+  padding: 0!important;
+
+  figure {
+    display: block;
+    margin: 0;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  figcaption {
+    background: rgba(255,255,255,0.8);
+    bottom: 0;
+    padding: 3rem;
+    position: absolute;
+    width: 100%;
+
+    h4 {
+      color: $almost-black;
+      font-family: 'Oswald', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    p {
+      color: $almost-black;
+    }
+  }
+}
+
+.black-background {
+  background-color: $almost-black;
+}
+
+.extra-margin {
+  margin-bottom: 3.750em;
+  @media screen and (max-width: 767px) {
+    margin-bottom: 1.875em;
+  }
+}
+
+.extra-margin-text {
+  margin-bottom: 5.313em;
+  @media screen and (max-width: 767px) {
+    margin-bottom: 2.625em;
+  }
+}
+
+.extra-margin-header {
+  margin-top: 9.250em;
+  @media screen and (max-width: 767px) {
+    margin-top: 6em;
+  }
+}
+
+.extra-margin-sides {
+  margin: 0 0.938em 1em 0.938em;
+  @media screen and (max-width: 767px) {
+    margin: 0 1em 0 1em;
+  }
+}
+
+.extra-padding {
+  padding-bottom: 15px;
+}
+
+.no-margin {
+  margin-left: 0!important;
+}

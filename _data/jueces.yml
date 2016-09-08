@@ -1,0 +1,25 @@
+titulo: Jueces
+juez:
+  - nombre: 1er juez
+    descripcion: |
+      Lorem ipsum d olor sit amet, consectetur adipiscing elit.
+      Lorem ipsum dolor sit amet, consectetur adi piscing elit.
+    imagen: img/jueces/juez.png
+
+  - nombre: 2do juez
+    descripcion: |
+      Lorem ipsum d olor sit amet, consectetur adipiscing elit.
+      Lorem ipsum dolor sit amet, consectetur adi piscing elit.
+    imagen: img/jueces/juez.png
+
+  - nombre: 3er juez
+    descripcion: |
+      Lorem ipsum d olor sit amet, consectetur adipiscing elit.
+      Lorem ipsum dolor sit amet, consectetur adi piscing elit.
+    imagen: img/jueces/juez.png
+
+  - nombre: 4to juez
+    descripcion: |
+      Lorem ipsum d olor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adi piscing elit.
+      Lorem ipsum d olor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adi piscing elit.
+    imagen: img/jueces/juez.png

@@ -1,0 +1,181 @@
+---
+layout: default
+title: Hackaton | Hackaton
+description: Contenido principal sobre el hackaton.
+id: Home
+---
+
+<!-- Imagen superior -->
+<section class="image-bg-fluid-height">
+  <div class="container">
+    <div class="row text-center">
+      <div class="col-lg-10 col-lg-offset-1 animated fadeIn wow">
+        <h1>{{ site.title }}</h1>
+      </div>
+    </div>
+  </div>
+  <button id="arrowButton" type="button">
+    <img src="img/arrow.png" alt="Más contenido" />
+  </button>
+</section>
+
+<!-- Objetivo del hackaton -->
+<section id="titleWithArrow" class="container animated fadeIn wow">
+  <div class="row white-block">
+    <div class="col-lg-10 col-lg-offset-1">
+      <h2 class="animated fadeIn wow">{{ site.data.objetivo.titulo }}</h2>
+      <p class="extra-margin-sides">{{ site.data.objetivo.descripcion }}</p>
+    </div>
+  </div>
+</section>
+
+<!-- Agenda -->
+{%if site.agenda %}
+<section class="secondary-color-background animated fadeIn wow">
+  <div class="container" data-wow-delay="1s">
+    <div class="row secondary-color-block">
+      <div class="col-lg-10 col-lg-offset-1">
+        <h2>{{ site.data.agenda.titulo }}</h2>
+        <ul class="row">
+          {% for evento in site.data.agenda.evento %}
+          <li class="col-md-6 col-sm-6 extra-margin">
+            <div class="row">
+              <div class="col-md-4 col-sm-4">
+                <h3>{{ evento.nombre }}</h3>
+              </div>
+              <div class="col-md-8 col-md-8">
+                <p>{{ evento.descripcion }}</p>
+              </div>
+            </div>
+          </li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+{% endif %}
+
+<!-- Mapa -->
+{% if site.mapa %}
+<section class="main-color-background animated fadeIn wow">
+  <div class="container">
+    <div class="row main-color-block">
+      <div class="col-lg-10 col-lg-offset-1">
+        <h2>{{ site.data.mapa.titulo }}</h2>
+        {{ site.data.mapa.codigo-mapa }}
+      </div>
+    </div>
+  </div>
+</section>
+{% endif %}
+
+<!-- Jueces y mentores-->
+<section class="container animated fadeIn wow">
+  <div class="row white-block-bis">
+    <div class="col-lg-10 col-lg-offset-1">
+      <h2>{{ site.data.jueces.titulo }}</h2>
+      <ul class="row">
+        {% for juez in site.data.jueces.juez %}
+        <li class="col-md-6 col-sm-6 extra-margin">
+          <div class="row">
+            <div class="col-md-4 col-sm-4 col-xs-4">
+              <img class="img-circle" alt="Juez" src="{{ juez.imagen }}" />
+            </div>
+            <div class="col-md-8 col-sm-8 col-xs-8">
+              <h4>{{ juez.nombre }}</h4>
+              <p>{{ juez.descripcion }}</p>
+            </div>
+          </div>
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+    <div class="col-lg-10 col-lg-offset-1">
+      <h2>{{ site.data.mentores.titulo }}</h2>
+      <ul class="row">
+        {% for mentor in site.data.mentores.mentor %}
+        <li class="col-md-6 col-sm-6 extra-margin">
+          <div class="row">
+            <div class="col-md-4 col-sm-4 col-xs-4">
+              <img class="img-circle" src="{{ mentor.imagen }}" />
+            </div>
+            <div class="col-md-8 col-sm-8 col-xs-8">
+              <h4>{{ mentor.nombre }}</h4>
+              <p>{{ mentor.descripcion }}</p>
+            </div>
+          </div>
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- Premios -->
+{% if site.premios %}
+<section class="main-color-background animated fadeIn wow">
+  <div class="container">
+    <div class="row main-color-block">
+      <div class="col-lg-10 col-lg-offset-1">
+        <h2 class="border-title">{{ site.data.premios.titulo }}</h2>
+        <ul class="row">
+          {% for premio in site.data.premios.premio %}
+          <li>
+            <div class="col-md-2 col-sm-4">
+              <h3>{{ premio.nombre }}</h3>
+            </div>
+            <div class="col-md-10 col-sm-8 extra-margin">
+              <p>{{ premio.descripcion }}</p>
+            </div>
+          </li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+{% endif %}
+
+{% if site.resultados %}
+<section class="secondary-color-background animated fadeIn wow">
+  <div class="container">
+    <div class="row secondary-color-block">
+      <div class="col-lg-10 col-lg-offset-1 extra-margin-text">
+        {% for resultados in site.data.resultados %}
+        <h2>{{ resultados.titulo }}</h2>
+        {{ resultados.descripcion}}
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>
+{% endif %}
+
+{% if site.ganadores %}
+<section class="main-color-background animated fadeIn wow">
+  <div class="container-fluid">
+    <div class="row main-color-block">
+      <div class="col-lg-10 col-lg-offset-1">
+        <h2>{{ site.data.ganadores.titulo }}</h2>
+      </div>
+        <ul class="no-margin">
+          {% for ganador in site.data.ganadores.ganador %}
+          <li>
+            <div class="col-md-4 col-sm-4 award">
+              <figure>
+                <img src="{{ ganador.imagen }}" alt="Ganador">
+                <figcaption>
+                  <h4>{{ ganador.nombre }}</h4>
+                  <p>{{ ganador.descripcion }}</p>
+                </figcaption>
+              </figure>
+            </div>
+          </li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+{% endif %}
