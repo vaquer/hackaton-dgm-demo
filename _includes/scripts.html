@@ -1,0 +1,66 @@
+<script type="text/javascript">
+  $(window).scroll(function() {
+    var scroll = $(window).scrollTop();
+
+    if (scroll >= 400) {
+        $(".scroll").addClass("scroll_padding");
+    } else {
+        $(".scroll").removeClass("scroll_padding");
+    }
+  });
+</script>
+
+<script type="text/javascript">
+  $('#arrowButton').click(function() {
+    $('html, body').animate({scrollTop: $('#titleWithArrow').offset().top}, 1000);
+  });
+</script>
+
+<script src="/js/wow.min.js"></script>
+
+<script>
+  wow = new WOW(
+    {
+      animateClass: 'animated',
+      offset:       100,
+      callback:     function(box) {
+        console.log("WOW: animating <" + box.tagName.toLowerCase() + ">")
+      }
+    }
+  );
+  wow.init();
+  document.getElementById('moar').onclick = function() {
+    var section = document.createElement('section');
+    section.className = 'section--purple wow fadeInDown';
+    this.parentNode.insertBefore(section, this);
+  };
+</script>
+
+{% if site.google_analytics %}
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', '{{ site.tracking_id }}', 'auto');
+  ga('send', 'pageview');
+  </script>
+{% endif %}
+
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '{{ site.app_id }}',
+      xfbml      : true,
+      version    : '{{ site.api_version }}'
+    });
+  };
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>

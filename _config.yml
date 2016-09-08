@@ -1,0 +1,36 @@
+# Site settings
+title: Título para el hackaton
+email: your-email@hackaton.com
+description: > # this means to ignore newlines until "baseurl:"
+  Write an awesome description for your new site here. You can edit this
+  line in _config.yml. It will appear in your document head meta (for
+  Google search results) and in your feed.xml site description.
+baseurl: "/"
+url: "https://github.com/datos-abiertos/hackaton"
+
+# Variables de contenido
+# Hay dos escenarios uno previo a la fecha de inicio y otro posterior al término del evento
+# En el previo las variables quedan como están
+# Para el posterior se debe invertir el valor de las variables
+preguntas: true
+reglas: true
+agenda: true
+mapa: true
+premios: true
+resultados: false
+ganadores: false
+
+# Google analytics
+google_analytics: false
+tracking_id: UA-000000-0
+
+# Facebook comments
+fbcomments: true
+app_id: 832650810194891
+api_version: v2.5
+
+# Build settings
+markdown: kramdown
+
+sass:
+    sass_dir: _sass

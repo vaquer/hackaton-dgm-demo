@@ -1,0 +1,27 @@
+<footer class="black-background animated fadeIn wow">
+  <div class="container">
+    <div class="row footer-block">
+      <div class="col-md-10 col-md-offset-1">
+        <div class="row">
+          <div class="col-md-4">
+            <ul class="footer-list">
+              <li><a href="{{ site.data.contacto.formulario }}">{{ site.data.contacto.titulo }}</a></li>
+              <!-- Para el contacto te recomendamos vincular un cuestionario de google forms -->
+              <li>{{ site.data.contacto.nombre-del-organizador }}</li>
+              <li>{{ site.data.contacto.texto-del-organizador }} <a href="{{ site.data.contacto.link-del-organizador }}">{{ site.data.contacto.titulo-del-link-del-organizador }}</a></li>
+            </ul>
+          </div>
+          <div class="col-md-4">
+          </div>
+          <div class="col-md-4">
+            <ul class="footer-icons">
+              {% for red-social in site.data.redes-sociales.red-social %}
+              <li><a href="{{ red-social.direccion }}"><img src="{{ site.github.url }}{{ red-social.imagen }}" alt="{{ red-social.nombre }}" /></a></li>
+              {% endfor %}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
